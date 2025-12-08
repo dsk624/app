@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <title>TourGuide Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: '#00D18B', // The specific green from screenshots
+              primary: '#00D18B', 
               secondary: '#F5F6F8',
-              active: '#FF6B00', // The orange for calendar/accents
+              active: '#FF6B00',
               danger: '#FF4D4F',
               textMain: '#333333',
               textSub: '#999999',
@@ -31,7 +34,6 @@
         background-color: #F5F6F8;
         -webkit-font-smoothing: antialiased;
       }
-      /* Hide scrollbar for clean mobile look */
       ::-webkit-scrollbar {
         width: 0px;
         background: transparent;
@@ -40,16 +42,19 @@
   <script type="importmap">
 {
   "imports": {
+    "vite": "https://aistudiocdn.com/vite@^7.2.7",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
     "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1"
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@vitejs/plugin-vue": "https://aistudiocdn.com/@vitejs/plugin-vue@^6.0.2",
+    "vue": "https://aistudiocdn.com/vue@^3.5.25"
   }
 }
 </script>
 </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <div id="app"></div>
+    <script type="module" src="./main.ts"></script>
   </body>
 </html>

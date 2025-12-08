@@ -6,10 +6,10 @@ export enum Tab {
 }
 
 export interface MenuItem {
-  icon: any; // Lucide icon component
+  icon: any; 
   label: string;
   hasArrow?: boolean;
-  color?: string; // For the icon color
+  color?: string;
 }
 
 export interface CalendarDay {
