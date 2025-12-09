@@ -40,7 +40,7 @@ const menuItems = [
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#F5F6F8] pb-24 relative overflow-y-auto">
+  <div class="min-h-screen bg-[#F5F6F8] relative">
     <!-- Green Header Background -->
     <div class="bg-primary h-64 w-full absolute top-0 left-0 z-0 rounded-b-[2rem]"></div>
 

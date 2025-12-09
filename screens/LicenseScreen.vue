@@ -7,7 +7,7 @@ const userStore = useUserStore();
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen bg-white font-sans text-[#333]">
+  <div class="flex flex-col h-full overflow-y-auto bg-white font-sans text-[#333]">
     <!-- Navbar -->
     <nav class="h-[50px] flex justify-between items-center px-4 bg-white relative shrink-0 z-10">
       <div class="w-10 h-full flex items-center cursor-pointer -ml-2" @click="router.back()">
@@ -28,7 +28,7 @@ const userStore = useUserStore();
     </nav>
 
     <!-- Rank Title Area -->
-    <div class="flex items-center justify-center w-full py-[22px] px-0 overflow-hidden">
+    <div class="flex items-center justify-center w-full py-[22px] px-0 overflow-hidden shrink-0">
       <div class="h-[16px] bg-[#9cb988] flex-1 mr-[12px] rounded-r-[2px]"></div>
       <!-- KaiTi Font -->
       <div class="font-kaiti text-[54px] text-[#9cb988] leading-none tracking-[4px] pt-1 font-bold text-shadow-bold transform scale-y-105">
@@ -38,7 +38,7 @@ const userStore = useUserStore();
     </div>
 
     <!-- Green Card Section -->
-    <section class="bg-[#9cb988] w-full py-[60px] pb-[70px] flex flex-col items-center text-white shadow-sm">
+    <section class="bg-[#9cb988] w-full py-[60px] pb-[70px] flex flex-col items-center text-white shadow-sm shrink-0">
       <div class="bg-white w-[140px] h-[196px] mb-[18px] overflow-hidden border-[3px] border-white shadow-md">
         <img 
           src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop" 
@@ -67,7 +67,7 @@ const userStore = useUserStore();
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#9cb988] text-white text-center py-[28px] text-[13px] tracking-[1.5px] font-medium mt-auto">
+    <footer class="bg-[#9cb988] text-white text-center py-[28px] text-[13px] tracking-[1.5px] font-medium mt-auto shrink-0">
       中华人民共和国文化和旅游部监制
     </footer>
   </div>
