@@ -6,7 +6,7 @@ const router = useRouter();
 </script>
 
 <template>
-  <div class="min-h-screen bg-white font-sans text-[#333]">
+  <div class="h-full overflow-y-auto bg-white font-sans text-[#333]">
     <!-- Navbar -->
     <div class="bg-white px-4 h-[44px] flex items-center justify-between sticky top-0 z-10 shadow-[0_1px_0px_rgba(0,0,0,0.05)]">
       <button class="-ml-2 w-10 h-full flex items-center justify-center active:opacity-60" @click="router.back()">

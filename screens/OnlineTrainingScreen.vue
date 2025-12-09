@@ -8,7 +8,7 @@ const userStore = useUserStore();
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#F5F6F8] font-sans pb-10">
+  <div class="h-full overflow-y-auto bg-[#F5F6F8] font-sans pb-10">
     <!-- Navbar -->
     <div class="bg-white px-4 h-[44px] flex items-center justify-between sticky top-0 z-20 shadow-sm">
       <button class="-ml-2 w-10 h-full flex items-center justify-center active:opacity-80" @click="router.back()">
