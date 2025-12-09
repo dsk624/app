@@ -24,6 +24,22 @@ const userStore = useUserStore();
 const handleItemClick = (label: string) => {
   if (label === '导游证') {
     router.push('/license');
+  } else if (label === '电子证照') {
+    router.push('/certificates');
+  } else if (label === '在线培训') {
+    router.push('/online-training');
+  } else if (label === '微信公众号') {
+    router.push('/wechat-account');
+  } else if (label === '知识库') {
+    router.push('/knowledge-base');
+  } else if (label === '隐私政策') {
+    router.push('/privacy-policy');
+  }
+};
+
+const handleGridClick = (label: string) => {
+  if (label === '基本资料') {
+    router.push('/basic-info');
   }
 };
 
@@ -72,7 +88,12 @@ const menuItems = [
              <User :size="14" fill="#E5CFA0" />
              <span class="font-medium text-sm">{{ userStore.userInfo.rank }} (当前等级)</span>
            </div>
-           <div class="flex items-center text-[#E5CFA0] text-xs opacity-90 relative z-10">
+           
+           <!-- Navigation Link -->
+           <div 
+             @click="router.push('/basic-info')"
+             class="flex items-center text-[#E5CFA0] text-xs opacity-90 relative z-10 cursor-pointer active:opacity-70 transition-opacity"
+           >
              <span>查看导游信息</span>
              <ChevronRight :size="12" class="ml-1" />
            </div>
@@ -84,7 +105,10 @@ const menuItems = [
           
           <!-- Grid Menu -->
           <div class="grid grid-cols-4 py-6 border-b border-gray-100">
-             <div class="flex flex-col items-center justify-center space-y-3 cursor-pointer active:opacity-70">
+             <div 
+               @click="handleGridClick('基本资料')"
+               class="flex flex-col items-center justify-center space-y-3 cursor-pointer active:opacity-70"
+             >
                 <IdCard class="text-primary" :size="28" :stroke-width="1.5" />
                 <span class="text-[#333] text-xs font-medium">基本资料</span>
              </div>
