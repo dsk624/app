@@ -1,1 +1,1 @@
-// Deprecated. Please use App.vue.
+// File removed. Please use App.vue

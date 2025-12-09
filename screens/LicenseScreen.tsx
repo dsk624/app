@@ -1,1 +1,1 @@
-// Deprecated. Please use LicenseScreen.vue.
+// File removed. Please use LicenseScreen.vue

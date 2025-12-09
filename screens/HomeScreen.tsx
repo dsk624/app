@@ -1,1 +1,1 @@
-// Deprecated. Please use HomeScreen.vue.
+// File removed. Please use HomeScreen.vue

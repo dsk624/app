@@ -1,1 +1,1 @@
-// Deprecated. Please use ProfileScreen.vue.
+// File removed. Please use ProfileScreen.vue

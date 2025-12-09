@@ -1,1 +1,1 @@
-// Deprecated. Please use main.ts for the Vue 3 application.
+// File removed. Please use main.ts

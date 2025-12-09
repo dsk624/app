@@ -1,1 +1,1 @@
-// Deprecated. Please use MessageScreen.vue.
+// File removed. Please use MessageScreen.vue

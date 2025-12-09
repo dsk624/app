@@ -1,1 +1,1 @@
-// Deprecated. Please use CalendarScreen.vue.
+// File removed. Please use CalendarScreen.vue

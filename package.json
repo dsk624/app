@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.3.4",
-    "lucide-vue-next": "^0.294.0"
+    "lucide-vue-next": "^0.460.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

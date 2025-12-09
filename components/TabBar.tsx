@@ -1,1 +1,1 @@
-// Deprecated. Please use TabBar.vue.
+// File removed. Please use TabBar.vue
