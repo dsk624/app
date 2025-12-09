@@ -1,10 +1,3 @@
-export enum Tab {
-  HOME = 'home',
-  CALENDAR = 'calendar',
-  MESSAGE = 'message',
-  PROFILE = 'profile'
-}
-
 export interface MenuItem {
   icon: any; 
   label: string;

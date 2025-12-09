@@ -1,14 +1,16 @@
 <script setup lang="ts">
-const emit = defineEmits<{
-  (e: 'back'): void
-}>();
+import { useRouter } from 'vue-router';
+import { useUserStore } from '../stores/user';
+
+const router = useRouter();
+const userStore = useUserStore();
 </script>
 
 <template>
   <div class="flex flex-col min-h-screen bg-white font-sans text-[#333]">
     <!-- Navbar -->
     <nav class="h-[50px] flex justify-between items-center px-4 bg-white relative shrink-0 z-10">
-      <div class="w-10 h-full flex items-center cursor-pointer -ml-2" @click="emit('back')">
+      <div class="w-10 h-full flex items-center cursor-pointer -ml-2" @click="router.back()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
           <path d="M15 18l-6-6 6-6"/>
         </svg>
@@ -30,7 +32,7 @@ const emit = defineEmits<{
       <div class="h-[16px] bg-[#9cb988] flex-1 mr-[12px] rounded-r-[2px]"></div>
       <!-- KaiTi Font -->
       <div class="font-kaiti text-[54px] text-[#9cb988] leading-none tracking-[4px] pt-1 font-bold text-shadow-bold transform scale-y-105">
-        初级导游
+        {{ userStore.userInfo.rank }}
       </div>
       <div class="h-[16px] bg-[#9cb988] flex-1 ml-[12px] rounded-l-[2px]"></div>
     </div>
@@ -45,7 +47,7 @@ const emit = defineEmits<{
         />
       </div>
       <div class="text-[28px] font-semibold mb-[4px] tracking-[2px] font-sans drop-shadow-md">
-        段帅
+        {{ userStore.userInfo.name }}
       </div>
       <div class="text-[14px] font-normal uppercase opacity-90 tracking-[1px] font-arial drop-shadow-sm">
         DUAN SHUAI
@@ -56,11 +58,11 @@ const emit = defineEmits<{
     <section class="px-[20px] pt-[70px] pb-[40px] text-center flex-1 bg-white">
       <div class="mb-[50px]">
         <div class="text-[#9cb988] text-[16px] mb-[10px] font-medium tracking-wider">导游证号</div>
-        <div class="text-[#333] text-[20px] font-normal font-sans tracking-wide">AKI7199S</div>
+        <div class="text-[#333] text-[20px] font-normal font-sans tracking-wide">{{ userStore.userInfo.licenseNo }}</div>
       </div>
       <div class="mb-[20px]">
         <div class="text-[#9cb988] text-[16px] mb-[10px] font-medium tracking-wider">导游语种</div>
-        <div class="text-[#333] text-[20px] font-normal font-sans tracking-wide">普通话</div>
+        <div class="text-[#333] text-[20px] font-normal font-sans tracking-wide">{{ userStore.userInfo.language }}</div>
       </div>
     </section>
 

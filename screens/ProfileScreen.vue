@@ -2,30 +2,28 @@
 import { 
   ChevronRight, 
   User, 
-  Settings, 
   ShieldCheck, 
   MessageCircle,
   Award,
   FileBadge,
-  CreditCard,
   Power,
   FilePenLine,
   Contact,
-  ClipboardList,
-  Leaf,
   MonitorPlay,
   Database,
   IdCard,
-  NotebookPen
+  NotebookPen,
+  Leaf
 } from 'lucide-vue-next';
+import { useRouter } from 'vue-router';
+import { useUserStore } from '../stores/user';
 
-const emit = defineEmits<{
-  (e: 'navigate', screen: string): void
-}>();
+const router = useRouter();
+const userStore = useUserStore();
 
 const handleItemClick = (label: string) => {
   if (label === '导游证') {
-    emit('navigate', 'license');
+    router.push('/license');
   }
 };
 
@@ -50,17 +48,17 @@ const menuItems = [
       <!-- User Profile Info -->
       <div class="px-6 flex items-center space-x-4 mb-6">
         <div class="w-16 h-16 rounded-full bg-white p-0.5 overflow-hidden border-2 border-white/30 shrink-0">
-          <img src="https://picsum.photos/id/64/200/200" alt="Avatar" class="w-full h-full rounded-full object-cover" />
+          <img :src="userStore.userInfo.avatar" alt="Avatar" class="w-full h-full rounded-full object-cover" />
         </div>
         <div class="text-white flex-1">
           <div class="flex flex-col">
              <div class="flex items-center justify-between">
-                <h2 class="text-xl font-bold tracking-wide">郑丽</h2>
+                <h2 class="text-xl font-bold tracking-wide">{{ userStore.userInfo.name }}</h2>
                 <div class="flex space-x-0.5">
-                  <span v-for="i in 3" :key="i" class="text-yellow-400 text-sm">★</span>
+                  <span v-for="i in userStore.userInfo.stars" :key="i" class="text-yellow-400 text-sm">★</span>
                 </div>
              </div>
-             <p class="text-sm opacity-90 mt-1 font-medium tracking-wide">13187886760</p>
+             <p class="text-sm opacity-90 mt-1 font-medium tracking-wide">{{ userStore.userInfo.phone }}</p>
           </div>
         </div>
       </div>
@@ -72,7 +70,7 @@ const menuItems = [
            
            <div class="flex items-center space-x-2 text-[#E5CFA0] relative z-10">
              <User :size="14" fill="#E5CFA0" />
-             <span class="font-medium text-sm">初级 (当前等级)</span>
+             <span class="font-medium text-sm">{{ userStore.userInfo.rank }} (当前等级)</span>
            </div>
            <div class="flex items-center text-[#E5CFA0] text-xs opacity-90 relative z-10">
              <span>查看导游信息</span>
